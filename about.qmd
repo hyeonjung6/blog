@@ -17,3 +17,5 @@ about:
 ---
 
 About this blog
+
+이곳에 자기소개를 쓰려고 합니다.
