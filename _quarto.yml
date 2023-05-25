@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "20212598 장현정"
+  title: "hyeonjung's blog"
   navbar:
     right:
       - about.qmd

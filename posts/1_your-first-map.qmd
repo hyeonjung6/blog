@@ -1,8 +1,9 @@
 ---
 layout: post
-title: "1"
-author: "장현정"
-description: "목록 항목 설명"
+title: "1_your-first-map"
+date: 2023-05-21
+categories: [Data mining]
+author: "hyeonjung"
 ---
 {
  "cells": [
