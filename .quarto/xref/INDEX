@@ -10,5 +10,53 @@
   },
   "posts/welcome/index.qmd": {
     "index.html": "7034deb4"
+  },
+  "1_your-first-map.ipynb": {
+    "1_your-first-map.html": "ebb08011"
+  },
+  "2_coordinate-reference-systems.ipynb": {
+    "2_coordinate-reference-systems.html": "5ae890ac"
+  },
+  "3_interactive-maps.ipynb": {
+    "3_interactive-maps.html": "af51a2f5"
+  },
+  "4_manipulating-geospatial-data.ipynb": {
+    "4_manipulating-geospatial-data.html": "f20271f6"
+  },
+  "5_proximity-analysis.ipynb": {
+    "5_proximity-analysis.html": "312ac288"
+  },
+  "posts/1_your-first-map.md": {
+    "1_your-first-map.html": "7dd5f36e"
+  },
+  "posts/2_coordinate-reference-systems.md": {
+    "2_coordinate-reference-systems.html": "f6e3d914"
+  },
+  "posts/3_interactive-maps.md": {
+    "3_interactive-maps.html": "a5ce3d99"
+  },
+  "posts/1_your-first-map.ipynb": {
+    "1_your-first-map.html": "f4a9f194"
+  },
+  "posts/2_coordinate-reference-systems.ipynb": {
+    "2_coordinate-reference-systems.html": "bb5daf29"
+  },
+  "posts/3_interactive-maps.ipynb": {
+    "3_interactive-maps.html": "75102de1"
+  },
+  "posts/4_manipulating-geospatial-data.ipynb": {
+    "4_manipulating-geospatial-data.html": "2428b113"
+  },
+  "posts/5_proximity-analysis.ipynb": {
+    "5_proximity-analysis.html": "54e38b49"
+  },
+  "posts/numpy.ipynb": {
+    "numpy.html": "4bf8eb4c"
+  },
+  "posts/pandas.ipynb": {
+    "pandas.html": "479666c6"
+  },
+  "posts/numpy.md": {
+    "numpy.html": "875276bd"
   }
 }
