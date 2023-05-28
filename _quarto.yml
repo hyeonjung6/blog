@@ -5,6 +5,8 @@ project:
 website:
   title: "hyeonjung's blog"
   navbar:
+    left:
+      - numpy.ipynb
     right:
       - about.qmd
       - icon: github
