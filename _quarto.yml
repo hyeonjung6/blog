@@ -13,7 +13,7 @@ website:
         href: https://twitter.com
 format:
   html:
-    theme: Minimal Mistakes
+    theme: cosmos
     css: styles.css
 
 
