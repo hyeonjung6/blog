@@ -1,10 +1,6 @@
 [
   {
     "listing": "/index.html",
-    "items": [
-      "/posts/1_your-first-map.html",
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
-    ]
+    "items": []
   }
 ]
