@@ -6,7 +6,7 @@ website:
   title: "hyeonjung's blog"
   navbar:
     left:
-      - numpy.ipynb
+      - Data mining.qmd
     right:
       - about.qmd
       - icon: github

@@ -1,0 +1,9 @@
+---
+title: "Data mining"
+layout: post
+date: 2023-05-21
+categories: [Data mining, Numpy]
+author: "Hyeonjung Jang"
+description: "Numpy 실습"
+image: numpy_img.jpg
+---
