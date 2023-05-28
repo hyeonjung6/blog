@@ -61,5 +61,11 @@
   },
   "posts/1_your-first-map.qmd": {
     "1_your-first-map.html": "78944f11"
+  },
+  "posts/numpy/numpy.ipynb": {
+    "numpy.html": "0a8157ec"
+  },
+  "posts/pandas/pandas.ipynb": {
+    "pandas.html": "618f7ee4"
   }
 }
