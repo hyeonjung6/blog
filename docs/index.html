@@ -70,9 +70,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-author','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -153,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Data mining">Data mining <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
 
@@ -166,22 +166,36 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1680592561544" data-listing-reading-time-sort="9.385">
+<div class="quarto-post image-right" data-index="0" data-categories="Data mining" data-listing-date-sort="1684594800000" data-listing-file-modified-sort="1685268890515" data-listing-reading-time-sort="9.32">
 <div class="body">
 <a href="./posts/numpy.html">
 <h3 class="no-anchor listing-title">
-“Numpy 기본”
+Numpy
 </h3>
 <div class="listing-subtitle">
 
 </div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('Data mining'); return false;">
+Data mining
+</div>
+</div>
+<a href="./posts/numpy.html">
 <div class="listing-description">
-“numpy 기본 코드 실습(한글)”
+<p>Code</p>
 </div>
 </a>
 </div>
 <div class="metadata">
-<a href="./posts/numpy.html"> </a>
+<a href="./posts/numpy.html">
+<div class="listing-date">
+May 21, 2023
+</div>
+<div class="listing-author">
+Hyeonjung Jang
+</div>
+</a>
 </div>
 </div>
 </div>
