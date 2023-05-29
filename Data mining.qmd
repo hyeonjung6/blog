@@ -1,7 +1,5 @@
 ---
-layout: category
 title: "Data mining"
-category: Data mining
-permalink: /categories/Data mining/
-file: numpy, pandas
 ---
+
+{% attach_file ../posts/numpy/numpy.ipynb %}
