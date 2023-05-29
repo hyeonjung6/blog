@@ -1,6 +1,7 @@
 ---
 layout: category
-title: ""
+title: "Data mining"
 category: Data mining
 permalink: /categories/Data mining/
+file: numpy, pandas
 ---
