@@ -1,6 +1,6 @@
 ---
 layout: category
-title: "Data mining"
+title: ""
 category: Data mining
 permalink: /categories/Data mining/
 ---
