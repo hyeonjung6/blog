@@ -2,6 +2,6 @@
 body {
     font-family: PT Sans, sans-serif;
   }
-body {
-    background-color: black;
+body.my-blog {
+    background-color: white;
   }
