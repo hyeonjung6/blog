@@ -7,13 +7,6 @@
     "text": "About this blog\n안녕하세요 저는 장현정입니다."
   },
   {
-    "objectID": "Data mining.html",
-    "href": "Data mining.html",
-    "title": "Data mining",
-    "section": "",
-    "text": "{% attach_file ../posts/numpy %}"
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "blog",

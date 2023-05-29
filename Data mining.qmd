@@ -1,5 +1,3 @@
 ---
 title: "Data mining"
 ---
-
-{% attach_file ../posts/numpy %}
