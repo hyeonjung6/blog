@@ -2,4 +2,4 @@
 title: "Data mining"
 ---
 
-{% attach_file ../posts/numpy/numpy.ipynb %}
+{% attach_file ../posts/numpy/numpy.ipynb Download Numpy.ipynb %}

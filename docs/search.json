@@ -11,7 +11,7 @@
     "href": "Data mining.html",
     "title": "Data mining",
     "section": "",
-    "text": "{% attach_file ../posts/numpy/numpy.ipynb %}"
+    "text": "{% attach_file ../posts/numpy/numpy.ipynb Download Numpy.ipynb %}"
   },
   {
     "objectID": "index.html",
