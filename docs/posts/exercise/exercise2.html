@@ -89,22 +89,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -129,7 +129,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed fullcontent">
@@ -139,7 +139,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">hyeonjung’s blog</span>
     </a>
   </div>
@@ -149,13 +149,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../Data mining.html">
+    <a class="nav-link" href="../../Data mining.html">
  <span class="menu-text">Data mining</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../about.html">
+    <a class="nav-link" href="../../about.html">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -232,7 +232,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </center>
 <p>There are several <a href="https://www.iucn.org/theme/protected-areas/about">protected areas</a> in South America, which operate under special regulations to ensure that species that migrate (or live) there have the best opportunity to thrive. You’d like to know if purple martins tend to visit these areas. To answer this question, you’ll use some recently collected data that tracks the year-round location of eleven different birds.</p>
 <p>Before you get started, run the code cell below to set everything up.</p>
-<div class="cell" data-execution_count="1">
+<div class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -311,7 +311,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Use the next code cell to create a GeoDataFrame <code>birds</code>.<br>
 - <code>birds</code> should have all of the columns from <code>birds_df</code>, along with a “geometry” column that contains Point objects with (longitude, latitude) locations.<br>
 - Set the CRS of <code>birds</code> to <code>{'init': 'epsg:4326'}</code>.</p>
-<div class="cell" data-execution_count="5">
+<div class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: Create the GeoDataFrame</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>birds <span class="op">=</span> gpd.GeoDataFrame(birds_df, geometry <span class="op">=</span> gpd.points_from_xy(birds_df[<span class="st">"location-long"</span>], birds_df[<span class="st">"location-lat"</span>]))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -326,12 +326,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="plot-the-data." class="level3">
 <h3 class="anchored" data-anchor-id="plot-the-data.">2) Plot the data.</h3>
 <p>Next, we load in the <code>'naturalearth_lowres'</code> dataset from GeoPandas, and set <code>americas</code> to a GeoDataFrame containing the boundaries of all countries in the Americas (both North and South America). Run the next code cell without changes.</p>
-<div class="cell" data-execution_count="6">
+<div class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load a GeoDataFrame with country boundaries in North/South America, print the first 5 rows</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>world <span class="op">=</span> gpd.read_file(gpd.datasets.get_path(<span class="st">'naturalearth_lowres'</span>))</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>americas <span class="op">=</span> world.loc[world[<span class="st">'continent'</span>].isin([<span class="st">'North America'</span>, <span class="st">'South America'</span>])]</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>americas.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="5">
 
 <div>
 
@@ -400,19 +400,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Use the next code cell to create a single plot that shows both: (1) the country boundaries in the <code>americas</code> GeoDataFrame, and (2) all of the points in the <code>birds_gdf</code> GeoDataFrame.</p>
 <p>Don’t worry about any special styling here; just create a preliminary plot, as a quick sanity check that all of the data was loaded properly. In particular, you don’t have to worry about color-coding the points to differentiate between birds, and you don’t have to differentiate starting points from ending points. We’ll do that in the next part of the exercise.</p>
-<div class="cell" data-execution_count="1">
+<div class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> americas.plot(figsize <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, linestyle <span class="op">=</span> <span class="st">':'</span>, edgecolor <span class="op">=</span> <span class="st">'gray'</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>birds.plot(ax <span class="op">=</span> ax, markersize <span class="op">=</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<pre><code>NameError: name 'americas' is not defined</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>&lt;Axes: &gt;</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<p><img src="exercise2_files/figure-html/cell-6-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
 <section id="where-does-each-bird-start-and-end-its-journey-part-1" class="level3">
 <h3 class="anchored" data-anchor-id="where-does-each-bird-start-and-end-its-journey-part-1">3) Where does each bird start and end its journey? (Part 1)</h3>
 <p>Now, we’re ready to look more closely at each bird’s path. Run the next code cell to create two GeoDataFrames: - <code>path_gdf</code> contains LineString objects that show the path of each bird. It uses the <code>LineString()</code> method to create a LineString object from a list of Point objects. - <code>start_gdf</code> contains the starting points for each bird.</p>
-<div class="cell" data-execution_count="10">
+<div class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># GeoDataFrame showing path for each bird</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>path_df <span class="op">=</span> birds.groupby(<span class="st">"tag-local-identifier"</span>)[<span class="st">'geometry'</span>].<span class="bu">apply</span>(<span class="bu">list</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: LineString(x)).reset_index()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>path_gdf <span class="op">=</span> gpd.GeoDataFrame(path_df, geometry<span class="op">=</span>path_df.geometry)</span>
@@ -431,7 +434,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarning: '+init=&lt;authority&gt;:&lt;code&gt;' syntax is deprecated. '&lt;authority&gt;:&lt;code&gt;' is the preferred initialization method. When making the change, be mindful of axis order changes: https://pyproj4.github.io/pyproj/stable/gotchas.html#axis-order-changes-in-proj-6
   in_crs_string = _prepare_from_proj_string(in_crs_string)</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="7">
 
 <div>
 
@@ -476,7 +479,7 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 </div>
 <p>Use the next code cell to create a GeoDataFrame <code>end_gdf</code> containing the final location of each bird.<br>
 - The format should be identical to that of <code>start_gdf</code>, with two columns (“tag-local-identifier” and “geometry”), where the “geometry” column contains Point objects. - Set the CRS of <code>end_gdf</code> to <code>{'init': 'epsg:4326'}</code>.</p>
-<div class="cell" data-execution_count="11">
+<div class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_df <span class="op">=</span> birds.groupby(<span class="st">"tag-local-identifier"</span>)[<span class="st">'geometry'</span>].<span class="bu">apply</span>(<span class="bu">list</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: x[<span class="op">-</span><span class="dv">1</span>]).reset_index()</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>end_gdf <span class="op">=</span> gpd.GeoDataFrame(end_df, geometry<span class="op">=</span>end_df.geometry)</span>
@@ -486,7 +489,7 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <pre><code>c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarning: '+init=&lt;authority&gt;:&lt;code&gt;' syntax is deprecated. '&lt;authority&gt;:&lt;code&gt;' is the preferred initialization method. When making the change, be mindful of axis order changes: https://pyproj4.github.io/pyproj/stable/gotchas.html#axis-order-changes-in-proj-6
   in_crs_string = _prepare_from_proj_string(in_crs_string)</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="11">
+<div class="cell-output cell-output-display" data-execution_count="8">
 
 <div>
 
@@ -533,12 +536,12 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <section id="where-does-each-bird-start-and-end-its-journey-part-2" class="level3">
 <h3 class="anchored" data-anchor-id="where-does-each-bird-start-and-end-its-journey-part-2">4) Where does each bird start and end its journey? (Part 2)</h3>
 <p>Use the GeoDataFrames from the question above (<code>path_gdf</code>, <code>start_gdf</code>, and <code>end_gdf</code>) to visualize the paths of all birds on a single map. You may also want to use the <code>americas</code> GeoDataFrame.</p>
-<div class="cell" data-execution_count="18">
+<div class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> americas.plot(figsize <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, linestyle <span class="op">=</span> <span class="st">':'</span>, edgecolor <span class="op">=</span> <span class="st">'gray'</span>)</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>start_gdf.plot(ax <span class="op">=</span> ax, color <span class="op">=</span> <span class="st">'red'</span>,  markersize <span class="op">=</span> <span class="dv">20</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>path_gdf.plot(ax <span class="op">=</span> ax, cmap <span class="op">=</span> <span class="st">'tab20b'</span>, linestyle <span class="op">=</span> <span class="st">'-'</span>, linewidth <span class="op">=</span> <span class="dv">1</span>, zorder <span class="op">=</span> <span class="dv">1</span>)</span>
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>end_gdf.plot(ax <span class="op">=</span> ax, color <span class="op">=</span> <span class="st">'green'</span>, markersize <span class="op">=</span> <span class="dv">20</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -550,14 +553,14 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <h3 class="anchored" data-anchor-id="where-are-the-protected-areas-in-south-america-part-1">5) Where are the protected areas in South America? (Part 1)</h3>
 <p>It looks like all of the birds end up somewhere in South America. But are they going to protected areas?</p>
 <p>In the next code cell, you’ll create a GeoDataFrame <code>protected_areas</code> containing the locations of all of the protected areas in South America. The corresponding shapefile is located at filepath <code>protected_filepath</code>.</p>
-<div class="cell" data-execution_count="20">
+<div class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Path of the shapefile to load</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>protected_filepath <span class="op">=</span> <span class="st">"data/SAPA_Aug2019-shapefile/SAPA_Aug2019-shapefile/SAPA_Aug2019-shapefile-polygons.shp"</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>protected_areas <span class="op">=</span> gpd.read_file(protected_filepath)</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>protected_areas.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div class="cell-output cell-output-display" data-execution_count="10">
 
 <div>
 
@@ -719,14 +722,14 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <section id="where-are-the-protected-areas-in-south-america-part-2" class="level3">
 <h3 class="anchored" data-anchor-id="where-are-the-protected-areas-in-south-america-part-2">6) Where are the protected areas in South America? (Part 2)</h3>
 <p>Create a plot that uses the <code>protected_areas</code> GeoDataFrame to show the locations of the protected areas in South America. (<em>You’ll notice that some protected areas are on land, while others are in marine waters.</em>)</p>
-<div class="cell" data-execution_count="22">
+<div class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Country boundaries in South America</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>south_america <span class="op">=</span> americas.loc[americas[<span class="st">'continent'</span>]<span class="op">==</span><span class="st">'South America'</span>]</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: plot protected areas in South America</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> south_america.plot(figsize <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, edgecolor <span class="op">=</span> <span class="st">'gray'</span>)</span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>protected_areas.plot(ax <span class="op">=</span> ax, alpha <span class="op">=</span> <span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
@@ -739,7 +742,7 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <p>You’re interested in determining what percentage of South America is protected, so that you know how much of South America is suitable for the birds.</p>
 <p>As a first step, you calculate the total area of all protected lands in South America (not including marine area). To do this, you use the “REP_AREA” and “REP_M_AREA” columns, which contain the total area and total marine area, respectively, in square kilometers.</p>
 <p>Run the code cell below without changes.</p>
-<div class="cell" data-execution_count="23">
+<div class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>P_Area <span class="op">=</span> <span class="bu">sum</span>(protected_areas[<span class="st">'REP_AREA'</span>]<span class="op">-</span>protected_areas[<span class="st">'REP_M_AREA'</span>])</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"South America has </span><span class="sc">{}</span><span class="st"> square kilometers of protected areas."</span>.<span class="bu">format</span>(P_Area))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -747,9 +750,9 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 </div>
 </div>
 <p>Then, to finish the calculation, you’ll use the <code>south_america</code> GeoDataFrame.</p>
-<div class="cell" data-execution_count="24">
+<div class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>south_america.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display" data-execution_count="13">
 
 <div>
 
@@ -817,16 +820,16 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 </div>
 </div>
 <p>Calculate the total area of South America by following these steps: - Calculate the area of each country using the <code>area</code> attribute of each polygon (with EPSG 3035 as the CRS), and add up the results. The calculated area will be in units of square meters. - Convert your answer to have units of square kilometeters.</p>
-<div class="cell" data-execution_count="28">
+<div class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: Calculate the total area of South America (in square kilometers)</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>totalArea <span class="op">=</span> <span class="bu">sum</span>(south_america.geometry.to_crs(epsg <span class="op">=</span> <span class="dv">3035</span>).area) <span class="op">/</span> <span class="dv">10</span><span class="op">**</span><span class="dv">6</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>totalArea</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <pre><code>17759005.81506123</code></pre>
 </div>
 </div>
 <p>Run the code cell below to calculate the percentage of South America that is protected.</p>
-<div class="cell" data-execution_count="29">
+<div class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># What percentage of South America is protected?</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>percentage_protected <span class="op">=</span> P_Area<span class="op">/</span>totalArea</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Approximately </span><span class="sc">{}% o</span><span class="st">f South America is protected.'</span>.<span class="bu">format</span>(<span class="bu">round</span>(percentage_protected<span class="op">*</span><span class="dv">100</span>, <span class="dv">2</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -840,11 +843,11 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <p>So, are the birds in protected areas?</p>
 <p>Create a plot that shows for all birds, all of the locations where they were discovered in South America. Also plot the locations of all protected areas in South America.</p>
 <p>To exclude protected areas that are purely marine areas (with no land component), you can use the “MARINE” column (and plot only the rows in <code>protected_areas[protected_areas['MARINE']!='2']</code>, instead of every row in the <code>protected_areas</code> GeoDataFrame).</p>
-<div class="cell" data-execution_count="31">
+<div class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> south_america.plot(figsize <span class="op">=</span> (<span class="dv">10</span>,<span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, edgecolor <span class="op">=</span> <span class="st">'gray'</span>)</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>protected_areas[protected_areas[<span class="st">'MARINE'</span>] <span class="op">!=</span> <span class="st">'2'</span>].plot(ax <span class="op">=</span> ax, alpha <span class="op">=</span> <span class="fl">0.4</span>, zorder <span class="op">=</span> <span class="dv">1</span>)</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>birds[birds.geometry.y <span class="op">&lt;</span> <span class="dv">0</span>].plot(ax <span class="op">=</span> ax, color <span class="op">=</span> <span class="st">'red'</span>, alpha <span class="op">=</span> <span class="fl">0.6</span>, markersize <span class="op">=</span> <span class="dv">10</span>, zorder <span class="op">=</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="31">
+<div class="cell-output cell-output-display" data-execution_count="16">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
 <div class="cell-output cell-output-display">
