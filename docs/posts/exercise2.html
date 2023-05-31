@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Hyeonjung Jang">
-<meta name="dcterms.date" content="2023-05-30">
+<meta name="dcterms.date" content="2023-05-31">
 <meta name="description" content="Kaggle Geospatial Analysis Exercise 2">
 
 <title>hyeonjung’s blog - Exercise2. Coordinate Reference Systems</title>
@@ -204,7 +204,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 30, 2023</p>
+        <p class="date">May 31, 2023</p>
       </div>
     </div>
     
@@ -400,15 +400,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p>Use the next code cell to create a single plot that shows both: (1) the country boundaries in the <code>americas</code> GeoDataFrame, and (2) all of the points in the <code>birds_gdf</code> GeoDataFrame.</p>
 <p>Don’t worry about any special styling here; just create a preliminary plot, as a quick sanity check that all of the data was loaded properly. In particular, you don’t have to worry about color-coding the points to differentiate between birds, and you don’t have to differentiate starting points from ending points. We’ll do that in the next part of the exercise.</p>
-<div class="cell" data-execution_count="9">
+<div class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> americas.plot(figsize <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, linestyle <span class="op">=</span> <span class="st">':'</span>, edgecolor <span class="op">=</span> <span class="st">'grey'</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> americas.plot(figsize <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, linestyle <span class="op">=</span> <span class="st">':'</span>, edgecolor <span class="op">=</span> <span class="st">'gray'</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>birds.plot(ax <span class="op">=</span> ax, markersize <span class="op">=</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>&lt;Axes: &gt;</code></pre>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="exercise2_files/figure-html/cell-6-output-2.png" class="img-fluid"></p>
+<div class="cell-output cell-output-error">
+<pre><code>NameError: name 'americas' is not defined</code></pre>
 </div>
 </div>
 </section>
