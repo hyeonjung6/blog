@@ -1,0 +1,14 @@
+[
+  {
+    "listing": "/index.html",
+    "items": [
+      "/posts/exercise/exercise1.html",
+      "/posts/exercise/exercise2.html",
+      "/posts/exercise/exercise3.html",
+      "/posts/exercise/exercise4.html",
+      "/posts/exercise/exercise5.html",
+      "/posts/pandas/pandas.html",
+      "/posts/numpy/numpy.html"
+    ]
+  }
+]
