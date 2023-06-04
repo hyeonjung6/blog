@@ -312,10 +312,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 - <code>birds</code> should have all of the columns from <code>birds_df</code>, along with a “geometry” column that contains Point objects with (longitude, latitude) locations.<br>
 - Set the CRS of <code>birds</code> to <code>{'init': 'epsg:4326'}</code>.</p>
 <div class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: Create the GeoDataFrame</span></span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the GeoDataFrame</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>birds <span class="op">=</span> gpd.GeoDataFrame(birds_df, geometry <span class="op">=</span> gpd.points_from_xy(birds_df[<span class="st">"location-long"</span>], birds_df[<span class="st">"location-lat"</span>]))</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: Set the CRS to {'init': 'epsg:4326'}</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the CRS to {'init': 'epsg:4326'}</span></span>
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>birds.crs <span class="op">=</span> {<span class="st">'init'</span> :<span class="st">'epsg:4326'</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarning: '+init=&lt;authority&gt;:&lt;code&gt;' syntax is deprecated. '&lt;authority&gt;:&lt;code&gt;' is the preferred initialization method. When making the change, be mindful of axis order changes: https://pyproj4.github.io/pyproj/stable/gotchas.html#axis-order-changes-in-proj-6
@@ -401,9 +401,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Use the next code cell to create a single plot that shows both: (1) the country boundaries in the <code>americas</code> GeoDataFrame, and (2) all of the points in the <code>birds_gdf</code> GeoDataFrame.</p>
 <p>Don’t worry about any special styling here; just create a preliminary plot, as a quick sanity check that all of the data was loaded properly. In particular, you don’t have to worry about color-coding the points to differentiate between birds, and you don’t have to differentiate starting points from ending points. We’ll do that in the next part of the exercise.</p>
 <div class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> americas.plot(figsize <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, linestyle <span class="op">=</span> <span class="st">':'</span>, edgecolor <span class="op">=</span> <span class="st">'gray'</span>)</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>birds.plot(ax <span class="op">=</span> ax, markersize <span class="op">=</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> americas.plot(figsize <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, linestyle <span class="op">=</span> <span class="st">':'</span>, edgecolor <span class="op">=</span> <span class="st">'gray'</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>birds.plot(ax <span class="op">=</span> ax, markersize <span class="op">=</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>&lt;Axes: &gt;</code></pre>
 </div>
@@ -480,11 +479,10 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <p>Use the next code cell to create a GeoDataFrame <code>end_gdf</code> containing the final location of each bird.<br>
 - The format should be identical to that of <code>start_gdf</code>, with two columns (“tag-local-identifier” and “geometry”), where the “geometry” column contains Point objects. - Set the CRS of <code>end_gdf</code> to <code>{'init': 'epsg:4326'}</code>.</p>
 <div class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_df <span class="op">=</span> birds.groupby(<span class="st">"tag-local-identifier"</span>)[<span class="st">'geometry'</span>].<span class="bu">apply</span>(<span class="bu">list</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: x[<span class="op">-</span><span class="dv">1</span>]).reset_index()</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>end_gdf <span class="op">=</span> gpd.GeoDataFrame(end_df, geometry<span class="op">=</span>end_df.geometry)</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>end_gdf.crs <span class="op">=</span> {<span class="st">'init'</span>: <span class="st">'epsg:4326'</span>}</span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>end_gdf.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>end_df <span class="op">=</span> birds.groupby(<span class="st">"tag-local-identifier"</span>)[<span class="st">'geometry'</span>].<span class="bu">apply</span>(<span class="bu">list</span>).<span class="bu">apply</span>(<span class="kw">lambda</span> x: x[<span class="op">-</span><span class="dv">1</span>]).reset_index()</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>end_gdf <span class="op">=</span> gpd.GeoDataFrame(end_df, geometry<span class="op">=</span>end_df.geometry)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>end_gdf.crs <span class="op">=</span> {<span class="st">'init'</span>: <span class="st">'epsg:4326'</span>}</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>end_gdf.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarning: '+init=&lt;authority&gt;:&lt;code&gt;' syntax is deprecated. '&lt;authority&gt;:&lt;code&gt;' is the preferred initialization method. When making the change, be mindful of axis order changes: https://pyproj4.github.io/pyproj/stable/gotchas.html#axis-order-changes-in-proj-6
   in_crs_string = _prepare_from_proj_string(in_crs_string)</code></pre>
@@ -557,9 +555,8 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Path of the shapefile to load</span></span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>protected_filepath <span class="op">=</span> <span class="st">"data/SAPA_Aug2019-shapefile/SAPA_Aug2019-shapefile/SAPA_Aug2019-shapefile-polygons.shp"</span></span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>protected_areas <span class="op">=</span> gpd.read_file(protected_filepath)</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>protected_areas.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>protected_areas <span class="op">=</span> gpd.read_file(protected_filepath)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>protected_areas.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
 
 <div>
@@ -726,7 +723,7 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Country boundaries in South America</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>south_america <span class="op">=</span> americas.loc[americas[<span class="st">'continent'</span>]<span class="op">==</span><span class="st">'South America'</span>]</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: plot protected areas in South America</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># plot protected areas in South America</span></span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>ax <span class="op">=</span> south_america.plot(figsize <span class="op">=</span> (<span class="dv">10</span>, <span class="dv">10</span>), color <span class="op">=</span> <span class="st">'white'</span>, edgecolor <span class="op">=</span> <span class="st">'gray'</span>)</span>
 <span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>protected_areas.plot(ax <span class="op">=</span> ax, alpha <span class="op">=</span> <span class="fl">0.4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
@@ -821,7 +818,7 @@ c:\Users\hyeonjung\anaconda3\lib\site-packages\pyproj\crs\crs.py:141: FutureWarn
 </div>
 <p>Calculate the total area of South America by following these steps: - Calculate the area of each country using the <code>area</code> attribute of each polygon (with EPSG 3035 as the CRS), and add up the results. The calculated area will be in units of square meters. - Convert your answer to have units of square kilometeters.</p>
 <div class="cell" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Your code here: Calculate the total area of South America (in square kilometers)</span></span>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the total area of South America (in square kilometers)</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>totalArea <span class="op">=</span> <span class="bu">sum</span>(south_america.geometry.to_crs(epsg <span class="op">=</span> <span class="dv">3035</span>).area) <span class="op">/</span> <span class="dv">10</span><span class="op">**</span><span class="dv">6</span></span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>totalArea</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
